@@ -8,8 +8,8 @@ const logger = require('morgan');
 const mongoose = require("mongoose");
 const indexRouter = require('./routes/index');
 
-const seedPosts = require('./seeds');
-seedPosts();  // Test data generation
+// const seedPosts = require('./seeds');
+// seedPosts();  // Test data generation
 
 
 const app = express();

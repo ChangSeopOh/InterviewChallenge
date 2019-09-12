@@ -1,90 +1,138 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Helpful-Human</title>
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" href="/stylesheets/style.css">
-		<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+<head>
+    <title>Helpful-Human</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
+</head>
+
+<body>
+
+  <!-- Nav bar -->
+    <nav id="nav" class="navbar navbar-expand-md sticky-top">
+        <a class="navbar-brand" href="/">
+            <img id="icon" src="/images/logo-symbol.svg" alt="helpful-human-icon">
+        </a>
+
+         <button class="navbar-dark navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+         </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto ">
+                       <li class="nav-item d-block d-md-none d-lg-none d-xl-none" > 
+                            <!-- <a class="nav-link" href="/random">
+                                Random Color
+                            </a> -->
+                            <button type="button" class="btn btn-outline-light btn-md btn-block" onclick="location.href='/random'">Random Color</button>
+                        </li>
+                        <li class="nav-item d-block d-md-none d-lg-none d-xl-none">
+                            <a class="nav-link" href="/?group=Red">
+                                Red
+                            </a>
+                        </li>
+                        <li class="nav-item d-block d-md-none d-lg-none d-xl-none">
+                            <a class="nav-link" href="/?group=Orange">
+                                Orange
+                            </a>
+                        </li>
+                       <li class="nav-item d-block d-md-none d-lg-none d-xl-none">
+                            <a class="nav-link" href="/?group=Yellow">
+                                Yellow
+                            </a>
+                        </li>
+                       <li class="nav-item d-block d-md-none d-lg-none d-xl-none">
+                            <a class="nav-link" href="/?group=Green">
+                                Green
+                            </a>
+                        </li>
+                       <li class="nav-item d-block d-md-none d-lg-none d-xl-none">
+                            <a class="nav-link" href="/?group=Blue">
+                                Blue
+                            </a>
+                        </li>
+                        <li class="nav-item d-block d-md-none d-lg-none d-xl-none">
+                            <a class="nav-link" href="/?group=Purple">
+                                Purple
+                            </a>
+                        </li>
+                       <li class="nav-item d-block d-md-none d-lg-none d-xl-none">
+                            <a class="nav-link" href="/?group=Brown">
+                                Brown
+                            </a>
+                        </li>
+                        <li class="nav-item d-block d-md-none d-lg-none d-xl-none">
+                            <a class="nav-link" href="/?group=Gray">
+                                Gray
+                            </a>
+                        </li>
+                      </ul>
+                      <form class="form-block" action="/" method="GET">
+                        <input class="form-control" type="text" placeholder="Search" id="search" name="search" value="<%=query.search%>">
+                    </form> 
+        
+                </div>
+    
+ 
+           
+
+    </nav>
+
+    <!-- Side Bar -->
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-outline-dark btn-block" onclick="location.href='/random'">Random Color</button>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/?group=Red">
+                                Red
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/?group=Orange">
+                                Orange
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/?group=Yellow">
+                                Yellow
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/?group=Green">
+                                Green
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/?group=Blue">
+                                Blue
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/?group=Purple">
+                                Purple
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/?group=Brown">
+                                Brown
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/?group=Gray">
+                                Gray
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
  
-     <nav id="nav" class="navbar sticky-top">
-		<a class="navbar-brand" href="/">
-		   	<svg id="icon" width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			  <g fill="#fff">
-			      <path d="M26.216,1.895 C12.806,1.895 1.896,12.805 1.896,26.215 C1.896,39.626 12.806,50.536 26.216,50.536 C39.626,50.536 50.536,39.626 50.536,26.215 C50.536,12.805 39.626,1.895 26.216,1.895 M26.216,52.431 C11.76,52.431 0,40.67 0,26.215 C0,11.76 11.76,0 26.216,0 C40.671,0 52.431,11.76 52.431,26.215 C52.431,40.67 40.671,52.431 26.216,52.431" id="Fill-3"></path>
-			      <path d="M26.558,26.002 C31.58,24.335 35.918,22.895 35.918,15.042 L35.918,14.63 L35.918,14.173 L35.918,13 L33.889,13 L33.889,15.042 C33.889,21.431 30.718,22.483 25.918,24.077 C24.173,24.656 22.207,25.319 20.38,26.365 L20.38,13 L18.351,13 L18.351,27.772 C17.481,28.503 16.693,29.381 16.029,30.441 L16.029,13 L14,13 L14,38.565 L14,40.607 L16.029,40.607 L16.029,39.435 L16.029,38.565 C16.029,29.497 21.622,27.64 26.558,26.002" id="Fill-6"></path>
-			      <path d="M37.89,13 L37.89,13.266 L37.89,14.173 L37.89,14.63 L37.89,15.042 C37.89,24.15 32.285,26.011 27.338,27.652 C22.327,29.315 18,30.751 18,38.565 L18,39.435 L18,40.607 L20.03,40.607 L20.03,38.565 C20.03,32.216 23.191,31.167 27.977,29.578 C29.73,28.996 31.704,28.331 33.538,27.277 L33.538,40.607 L35.568,40.607 L35.568,25.867 C36.439,25.133 37.227,24.252 37.89,23.189 L37.89,40.607 L39.919,40.607 L39.919,15.042 L39.919,13.266 L39.919,13 L37.89,13 Z" id="Fill-8"></path>
-			  </g>
-			</svg>
-  		</a>
-  		<form class="form-inline my-2 my-md-0" action="/" method="GET">
-	      <input class="form-control" type="text" placeholder="Search" id="search" name="search" value="<%=query.search%>">
-	    </form>
-	</nav> 
-    
-<div class="container-fluid">
-  <div class="row">
-    <nav class="col-md-2 d-none d-md-block sidebar">
-      <div class="sidebar-sticky">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <button type="button" class="btn btn-outline-dark btn-block"  onclick="location.href='/random'">Random Color</button>
-
-          </li> 
-          <li class="nav-item">
-            <a class="nav-link" href="/?group=Red">
-              Red
-            </a>
-          </li> 
-          <li class="nav-item">
-            <a class="nav-link" href="/?group=Orange">
-              Orange
-            </a>
-          </li> 
-          <li class="nav-item">
-            <a class="nav-link" href="/?group=Yellow">
-              Yellow
-            </a>
-          </li> 
-          <li class="nav-item">
-            <a class="nav-link" href="/?group=Green">
-              Green
-            </a>
-          </li> 
-          <li class="nav-item">
-            <a class="nav-link" href="/?group=Blue">
-              Blue
-            </a>
-          </li> 
-          <li class="nav-item">
-            <a class="nav-link" href="/?group=Purple">
-              Purple
-            </a>
-          </li> 
-          <li class="nav-item">
-            <a class="nav-link" href="/?group=Brown">
-              Brown
-            </a>
-          </li> 
-          <li class="nav-item">
-            <a class="nav-link" href="/?group=Gray">
-              Gray
-            </a>
-          </li> 
-
-        </ul>
-      </div>
-    </nav>
-    
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-       
-    
-    
-    
-    
-    
-    
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">

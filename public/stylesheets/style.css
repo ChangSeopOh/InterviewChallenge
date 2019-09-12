@@ -17,8 +17,22 @@ body {
     padding: 5px 10px;
 }
 
+/*
+ * Navbar
+ */
+.navbar-collapse .navbar-nav .btn{
+margin : 0.5rem 0rem;
+}
+.navbar-collapse .navbar-nav .nav-link{  
+    color: gray;
+    padding-top:0rem;
 
+}
 
+.navbar-collapse .navbar-nav .nav-link:hover{  
+    color: white;
+
+}
 /*
  * Sidebar
  */
@@ -129,8 +143,11 @@ Index List-view
 }
 
 .card-body {
-    height: 2rem;
+
     padding: 0.5rem 1rem;
+    padding-right:0;
+    margin-right:0;
+    height: 2rem;
 }
 
 .card-body .card-title {
