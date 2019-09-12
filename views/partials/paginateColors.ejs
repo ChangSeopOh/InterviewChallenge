@@ -1,0 +1,18 @@
+	<div class="pagination">
+			<% if(colors.page - 1){ %>
+				<a href="<%= paginateUrl%><%=colors.page -1%>">Prev</a>
+			<% } %>
+			<% if(colors.pages>1 &&colors.docs.length){%>
+				<%for(let i =1; i<=colors.pages;i++){%>
+					<a href="<%= paginateUrl%><%=i%>"
+					<%= i === colors.page ? 'style= text-decoration:underline;font-weight:bold;' : '' %>
+					><%=i%></a>
+				<%}%>
+			<%}%>
+			<% if((colors.page+1)<=colors.pages){ %>
+				<a href="<%= paginateUrl%><%=colors.page+1%>">Next</a>
+			<% } %>
+	</div>
+
+
+ 

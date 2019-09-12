@@ -1,0 +1,64 @@
+<% include ./partials/header%>
+<div class="container">
+  
+
+ 
+    <div class="row text-center" id="swatche-grid">
+	        <div class="col-lg-12 col-md-12 col-sm-12">
+	            <div class="card card-detail">
+	                <svg class="bd-placeholder-img card-img-detail" role="img">
+	                    <rect class="rect-detail" width="100%" height="100%" fill="<%=swatche.hex%>" />
+	                    <div class="card-body card-body-detail">
+	                        <h5 class="card-title card-title-detail"><%=swatche.hex%></h5>
+	                    </div>
+	            </div>
+	        </div>
+    </div> 
+
+    <div class="card-deck" id="swatches-grid"> 
+	            <div class="card card-bottom" onclick="changeDetail(1);">
+	                <svg class="bd-placeholder-img card-img-bottom" role="img">
+	                    <rect class="rect-bottom-1" width="100%" height="100%" fill="<%=swatche.hex%>" />
+	                    <div class="card-body">
+	                        <h5 class="card-title card-title-bottom card-bottom-1"><%=swatche.hex%></h5>
+	                    </div>
+	            </div>
+	            <div class="card card-bottom" onclick="changeDetail(2);">
+	                <svg class="bd-placeholder-img card-img-bottom" role="img">
+	                    <rect class="rect-bottom-2" width="100%" height="100%" fill="<%=swatche.hex%>" />
+	                    <div class="card-body">
+	                        <h5 class="card-title card-title-bottom card-bottom-2"><%=swatche.hex%></h5>
+	                    </div>
+	            </div>
+	            <div class="card card-bottom" onclick="changeDetail(5);">
+	                <svg class="bd-placeholder-img card-img-bottom" role="img">
+	                    <rect  width="100%" height="100%" fill="<%=swatche.hex%>" />
+	                    <div class="card-body">
+	                        <h5 class="card-title card-title-bottom"><%=swatche.hex%></h5>
+	                    </div>
+	            </div>
+	            <div class="card card-bottom" onclick="changeDetail(3);">
+	                <svg class="bd-placeholder-img card-img-bottom" role="img">
+	                    <rect class="rect-bottom-3" width="100%" height="100%" fill="<%=swatche.hex%>" />
+	                    <div class="card-body">
+	                        <h5 class="card-title card-title-bottom  card-bottom-3"><%=swatche.hex%></h5>
+	                    </div>
+	            </div>
+	            <div class="card card-bottom" onclick="changeDetail(4);">
+	                <svg class="bd-placeholder-img card-img-bottom" role="img">
+	                    <rect class="rect-bottom-4" width="100%" height="100%" fill="<%=swatche.hex%>" />
+	                    <div class="card-body">
+	                        <h5 class="card-title card-title-bottom  card-bottom-4"><%=swatche.hex%></h5>
+	                    </div>
+	            </div>
+         
+    </div> 
+<div class="text-center clear">
+	
+	  <button id="clear" type="button" class="btn btn-lg btn-outline-dark" onclick="location.href='/'">Clear</button>
+</div> 
+ 
+<script src="/javascripts/changeTints.js"></script>
+
+</div>
+<% include ./partials/footer%>
